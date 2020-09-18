@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: jankulpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jankulpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: jankulpipelinesjavascriptdocker 
+          image: acrjk1203.azurecr.io/jankulpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
